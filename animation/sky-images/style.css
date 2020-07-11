@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./bg.jpg');
+    height: 675px;
+    width: 1349px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* alian css code */
+
+.alian-1 {
+    position: absolute;
+    top: 72%;
+    left: 47%;
+    animation: alian1 1.5s linear infinite;
+}
+
+.alian-2 {
+    position: absolute;
+    top: 63%;
+    left: 74%;
+    animation: alian2 1.5s linear infinite;
+}
+
+.alian-3 {
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    animation: alian3 1.5s linear infinite;
+}
+
+
+/*spaceship css code*/
+
+.spaceship-1 {
+    position: absolute;
+    right: -18%;
+    top: 10%;
+    animation: spaceship1 120s linear infinite;
+}
+
+.spaceship-2 {
+    position: absolute;
+    right: -20%;
+    top: 17%;
+    animation: spaceship2 200s linear infinite;
+}
+
+.spaceship-3 {
+    position: absolute;
+    right: -20%;
+    top: 2%;
+    animation: spaceship3 380s linear infinite;
+}
+
+
+/* astranout css code*/
+
+.astronaut1 {
+    position: absolute;
+    left: -10%;
+    animation: astronaut1 50s linear infinite;
+}
+
+.astronaut2 {
+    position: absolute;
+    right: 20%;
+    top: -50%;
+    animation: astronaut2 50s linear infinite;
+}
+
+
+/* astranout animation code*/
+
+@keyframes astronaut1 {
+    0% {
+        top: 0%;
+        left: -15%;
+    }
+    100% {
+        top: 30%;
+        left: 108%
+    }
+}
+
+@keyframes astronaut2 {
+    0% {
+        top: -50%;
+        right: 20%;
+    }
+    100% {
+        top: 105%;
+        right: 105%;
+    }
+}
+
+
+/*spaceship animation code*/
+
+@keyframes spaceship1 {
+    0% {
+        right: -18%;
+    }
+    50% {
+        right: 110%;
+    }
+    100% {
+        right: -18%;
+    }
+}
+
+@keyframes spaceship2 {
+    0% {
+        right: -20%;
+    }
+    50% {
+        right: 110%;
+    }
+    100% {
+        right: -20%;
+    }
+}
+
+@keyframes spaceship3 {
+    0% {
+        right: -20%;
+    }
+    50% {
+        right: 110%;
+    }
+    100% {
+        right: -20%;
+    }
+}
+
+
+/* alians animations code */
+
+@keyframes alian1 {
+    0% {
+        top: 72%;
+        left: 47%;
+    }
+    50% {
+        top: 62%;
+        left: 47%;
+    }
+    100% {
+        top: 72%;
+        left: 47%;
+    }
+}
+
+@keyframes alian2 {
+    0% {
+        top: 63%;
+        left: 74%;
+    }
+    50% {
+        top: 55%;
+        left: 74%;
+    }
+    100% {
+        top: 63%;
+        left: 74%;
+    }
+}
+
+@keyframes alian3 {
+    0% {
+        top: 70%;
+        left: 90%;
+    }
+    50% {
+        top: 64%;
+        left: 90%;
+    }
+    100% {
+        top: 70%;
+        left: 90%;
+    }
+}

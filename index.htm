@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title>APEX360</title>
+    <link rel="icon" href="images\falicon.jpg" sizes="16x16 32x32" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        
+        h2 {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .jumbotron {
+            background-color: #f4511e;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+        
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+        
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #f4511e;
+        }
+        
+        .carousel-indicators li {
+            border-color: #f4511e;
+        }
+        
+        .carousel-indicators li.active {
+            background-color: #f4511e;
+        }
+        
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        
+        .item span {
+            font-style: normal;
+        }
+        
+        .panel {
+            border: 1px solid #f4511e;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+        
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
+        
+        .panel-heading {
+            color: #fff !important;
+            background-color: #f4511e !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .panel-footer {
+            background-color: white !important;
+        }
+        
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
+        
+        .navbar {
+            margin-bottom: 10;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 20px !important;
+            line-height: 10.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #f4511e;
+        }
+        
+        .slideanim {
+            visibility: hidden;
+        }
+        
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+        
+        .row.heading h2 {
+            color: #f4511e;
+            font-size: 52.52px;
+            line-height: 100px;
+            font-weight: 400;
+            text-align: center;
+            margin: 0 0 40px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .heading.heading-icon {
+            display: block;
+        }
+        
+        .padding-lg {
+            display: block;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .practice-area.padding-lg {
+            padding-bottom: 55px;
+            padding-top: 55px;
+        }
+        
+        .practice-area .inner {
+            border: 1px solid #999999;
+            text-align: center;
+            margin-bottom: 28px;
+            padding: 40px 25px;
+        }
+        
+        .our-webcoderskull .cnt-block:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border: 0;
+        }
+        
+        .practice-area .inner h3 {
+            color: #3c3c3c;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 0;
+        }
+        
+        .practice-area .inner p {
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+        
+        .practice-area .inner img {
+            display: inline-block;
+        }
+        
+        .our-webcoderskull .cnt-block {
+            float: left;
+            width: 100%;
+            background: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            border: 2px solid #d5d5d5;
+            margin: 0 0 28px;
+        }
+        
+        .our-webcoderskull .cnt-block figure {
+            width: 148px;
+            height: 105px;
+            border-radius: 100%;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .our-webcoderskull .cnt-block img {
+            width: 148px;
+            height: 148px;
+            border-radius: 100%;
+        }
+        
+        .our-webcoderskull .cnt-block h3 {
+            color: #2a2a2a;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 6px 0;
+            text-transform: uppercase;
+        }
+        
+        .our-webcoderskull .cnt-block h3 a {
+            text-decoration: none;
+            color: #2a2a2a;
+        }
+        
+        .our-webcoderskull .cnt-block h3 a:hover {
+            color: #337ab7;
+        }
+        
+        .our-webcoderskull .cnt-block p {
+            color: #2a2a2a;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+        
+        .our-webcoderskull .cnt-block .follow-us {
+            margin: 20px 0 0;
+        }
+        
+        .our-webcoderskull .cnt-block .follow-us li {
+            display: inline-block;
+            width: auto;
+            margin: 0 5px;
+        }
+        
+        .our-webcoderskull .cnt-block .follow-us li .fa {
+            font-size: 24px;
+            color: #767676;
+        }
+        
+        .our-webcoderskull .cnt-block .follow-us li .fa:hover {
+            color: #025a8e;
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="#"><img src="images\Apex360 logo-01.png" height="33" width="85"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">TEAM</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>
+            APEX360
+        </h1>
+        <p>A New Way To Lead The Future</p>
+        <form>
+
+        </form>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>ABOUt</h2><br>
+                <h4>APEX360 a new start to degitalise yourself. We help you to compete the world in the way of website desigining and help your users to have a good tour of your website.</h4><br>
+                <p>APEX360 has it's unique values and imporatance in it self. It doesn't compromise in quality of work. we also provide you an expertise designer and a degital marketing analiser to design and anilise your website. We give u the best UI/UX
+                    design. our team work together to provide you the best experience of a webpage.</p>
+                <br><a href="#contact"><button class="btn btn-default btn-lg">Get in Touch</button></a>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo slideanim"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2><br>
+                <h4><strong>MISSION:</strong>Our mission is to make things degitalise and help ferms to have and their own and coustimised website as low as possible.<br> </h4><br>
+                <p><strong>VISION:</strong> Our vision to make India degitalised in all aspect. By providing a digital platform to a company may lead them to gain more profits and help then to stay active all the time with regard to time and money.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h1>SERVICES</h1>
+        <h5>WHAT WE OFFER</h5>
+        <br>
+        <BR>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <a href="animation\animationindex.htm">
+                    <span class="glyphicon glyphicon-film logo-small"></span>
+                </a>
+                <h4>ANIMATION</h4>
+                <p>GIVE YOUR WEBSITE A CUSTOMIZED ANIMATIC FEEL.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo-small"></span>
+                <h4>VIRTUAL TOUR</h4>
+                <p>GIVE YOUR WEBSITE A LIVE EXPERIENCE BY VIRTUAL TOUR.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-cog logo-small"></span>
+                <h4>DEVELOPER</h4>
+                <p>DEVELOPE YOUR WEBSITE AS YOU WANT.</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-comment logo-small"></span>
+                <h4>CHATBOT</h4>
+                <p>GIVE EXPERIENCE OF CHATBOT.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-tint logo-small"></span>
+                <h4>EDITING</h4>
+                <p>MAKE YOUR PICTURE LOOK CINEMATIC.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-pencil logo-small"></span>
+                <h4 style="color:#303030;">DESIGNING</h4>
+                <p>DESIGN ON YOUR OWN VIEWS.</p>
+            </div>
+        </div>
+    </div>
+    <BR>
+    <BR>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+        <section class="our-webcoderskull padding-lg">
+            <div class="container">
+                <div class="row heading heading-icon">
+                    <h2>Our Team</h2>
+                    <p>MAKERS OF APEX360</p>
+                </div>
+                <ul class="row">
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
+                            <h3>
+                                <a href="#"></a>MRUTYUNJAY PARIDA</h3>
+                            <p> CO-FOUNDER | APEX360</p>
+                            <p>Web Developer</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team1.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="#">SANTOSH KUMAR PANDA </a></h3>
+                            <P>CO-FOUNDER | APEX360</P>
+                            <p>Digital Marketing</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team2.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="#">SOURAVA PANDA</a></h3>
+                            <P>FOUNDER | APEX360</P>
+                            <p>Web Developer</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team1.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="#">ADITYA AURODIPTA</a></h3>
+                            <P>CO-FOUNDER | APEX360</P>
+                            <p>GRAPHICS DESIGNER</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div><br>
+
+    <h2></h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4>“Success is not final; failure is not fatal: it is the courage to continue that counts.”<br><span>-Winston Churchill</span></h4>
+            </div>
+            <div class="item">
+                <h4>“Business opportunities are like buses, there’s always another one coming.”<br><span>-Richard Branson</span></h4>
+            </div>
+            <div class="item">
+                <h4>“You only have to do a few things right in your life so long as you don’t do too many things wrong.”<br><span>-Warren Buffett</span></h4>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">CONTACT US </h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> ANDHRA PRADESH, INDIA</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +91 7032894474</p>
+                <a href="mailto:help.apex360@gmail.com?subject = Feedback&body = Message">
+                    <p><span class="glyphicon glyphicon-envelope"></span> contact@apex360.com</p>
+                </a>
+            </div>
+            <!--
+            <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!-- Image of location/map -->
+
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>copyright © 2020 | DESIGNED BY | <a href="#" title="Visit INSTAPAGE">APEX360</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+
+</body>
+
+</html>
